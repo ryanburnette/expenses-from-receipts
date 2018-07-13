@@ -1,0 +1,20 @@
+{
+  "name": "expenses-from-receipts",
+  "version": "1.0.0",
+  "description": "Make an expense spreadsheet from structured receipt files.",
+  "scripts": {
+    "test": "NODE_ENV=test mocha test/ --recursive",
+    "test:watch": "NODE_ENV=test nodemon --watch lib --watch test --exec 'npm run test || true'"
+  },
+  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.2"
+  },
+  "dependencies": {
+    "currency.js": "^1.1.4",
+    "date-fns": "^1.29.0"
+  }
+}

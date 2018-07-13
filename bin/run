@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const dateToString = require('../lib/date-to-string')
+const expenseFromFilename = require('../lib/expense-from-filename')
+const getFileName = require('../lib/file-name')
+
+const from = process.argv[2]
+
+fs.readdir(from,(err,files) => {
+  files.forEach(file => {
+    if ( file.includes('.pdf') ) {
+      let obj = expenseFromFilename(getFileName(file))
+      console.log( file, obj.amount.format() )
+    }
+  })
+})
