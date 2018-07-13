@@ -11,7 +11,12 @@ fs.readdir(from,(err,files) => {
   files.forEach(file => {
     if ( file.includes('.pdf') ) {
       let obj = expenseFromFilename(getFileName(file))
-      console.log( file, obj.amount.format() )
+
+      let date = obj.date
+      let vendor = obj.vendor
+      let amnt = obj.amount.format()
+
+      console.log(`${date},${vendor},,${amnt}`)
     }
   })
 })
