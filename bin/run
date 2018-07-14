@@ -16,7 +16,9 @@ fs.readdir(from,(err,files) => {
       let vendor = obj.vendor
       let amnt = obj.amount.format()
 
-      console.log(`${date},${vendor},,${amnt}`)
+      //console.log(date)
+      //console.log(vendor)
+      console.log(amnt)
     }
   })
 })
